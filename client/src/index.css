@@ -1,0 +1,59 @@
+/* client/src/index.css */
+:root {
+  --bg: #050505;
+  --primary: #00f2ff; /* Neon Cyan */
+  --secondary: #7000ff; /* Deep Purple */
+  --accent: #ffffff;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --text-main: #ffffff;
+  --text-muted: #94a3b8;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text-main);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* --- ANIMATIONS & UTILS --- */
+.glass-panel {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.neon-btn {
+  padding: 12px 30px;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.neon-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+}
+
+/* Background Canvas */
+#canvas-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
